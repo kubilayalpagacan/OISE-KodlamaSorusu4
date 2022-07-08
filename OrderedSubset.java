@@ -27,17 +27,12 @@ public class OrderedSubset {
             temp += sayilar[i];
             if (temp==ulasilacakToplam)
                 return true;
-            }
-            if (temp<ulasilacakToplam){
+
+            else {
                 int[] sayilar2 = nsn2.removeFirstElement(sayilar);
                 if (siraliAltKumeVarMi(sayilar2, ulasilacakToplam)){
                     return true;
                 }
-            }
-        if(temp>ulasilacakToplam){
-            int[] sayilar2 = nsn2.removeFirstElement(sayilar);
-            if (siraliAltKumeVarMi(sayilar2, ulasilacakToplam)){
-                return true;
             }
         }
         return false;
