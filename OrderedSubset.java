@@ -20,8 +20,6 @@ public class OrderedSubset {
 
     boolean siraliAltKumeVarMi(int[] sayilar, int ulasilacakToplam) {
         OrderedSubset nsn2 = new OrderedSubset();
-        if (sayilar.length==0)
-            return false;
         int temp = 0;
         for (int i = 0; i < sayilar.length; i++) {
             temp += sayilar[i];
