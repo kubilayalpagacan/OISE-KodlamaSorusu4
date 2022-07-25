@@ -6,6 +6,10 @@ import java.util.Scanner;
 
 public class OrderedSubset {
     int[] removeFirstElement(int[] sayilar) {
+        if (sayilar.length==0){
+            System.out.println("false");
+            System.exit(0);
+        }
         List<Integer> arrayList = new ArrayList<>(sayilar.length);
         for (int i : sayilar) {
             arrayList.add(Integer.valueOf(i));
@@ -25,13 +29,10 @@ public class OrderedSubset {
             temp += sayilar[i];
             if (temp==ulasilacakToplam)
                 return true;
-
-            else {
-                int[] sayilar2 = nsn2.removeFirstElement(sayilar);
-                if (siraliAltKumeVarMi(sayilar2, ulasilacakToplam)){
-                    return true;
-                }
-            }
+        }
+        int[] sayilar2 = nsn2.removeFirstElement(sayilar);
+        if (siraliAltKumeVarMi(sayilar2, ulasilacakToplam)){
+            return true;
         }
         return false;
     }
